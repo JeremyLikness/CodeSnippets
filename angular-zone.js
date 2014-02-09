@@ -27,3 +27,8 @@ setInterval(function() {
     externalTimeObj.time = new Date();
 }, 1000);
 
+var app = angular.module("myApp", []);
+app.value("timerObj", externalTimeObj);
+app.controller("myController", function($scope, timerObj) {
+    $scope.timer = timerObj;
+});

@@ -32,3 +32,12 @@ app.value("timerObj", externalTimeObj);
 app.controller("myController", function($scope, timerObj) {
     $scope.timer = timerObj;
 });
+
+var digestZone = (function () {
+    return {
+        digest: function() { },
+        onZoneLeave: function () {
+            zone.digest();
+        }
+    };
+}());

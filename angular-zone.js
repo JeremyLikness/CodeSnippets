@@ -19,3 +19,11 @@ zone.fork(profilingZone).run(function() {
     zone.reset();
     main();
 });
+
+var externalTimeObj = {
+    time: new Date()
+};
+setInterval(function() {
+    externalTimeObj.time = new Date();
+}, 1000);
+

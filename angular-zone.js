@@ -33,9 +33,17 @@ app.controller("myController", function($scope, timerObj) {
     $scope.timer = timerObj;
 });
 
+var digestCapture = null;
+
 var digestZone = (function () {
     return {
         digest: function() { },
+        onZoneEnter: function () {
+            if (digestCapture) {
+                zone.digest = digestCapture;
+                zone.onZoneEnter = function() {};
+            }
+        },
         onZoneLeave: function () {
             zone.digest();
         }

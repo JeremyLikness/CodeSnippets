@@ -49,3 +49,16 @@ var digestZone = (function () {
         }
     };
 }());
+
+app.run(function($rootScope){
+    digestCapture = function() {
+        $rootScope.$digest();
+    };        
+});
+
+zone.fork(digestZone).run(function() {
+    setInterval(function() {
+        externalTimeObj.time = new Date();    
+    }, 1000);
+});
+

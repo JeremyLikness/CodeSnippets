@@ -1,5 +1,6 @@
-<Car>
-    <Engine>
-        <Hemi cylinders="8"/>
-    </Engine>
-</Car>
+<DataTemplate x:Name="TestTemplate">
+    <StackPanel Orientation="Horizontal">
+        <TextBlock x:Name="tbName" Text="{Binding Name}"></TextBlock>
+        <Button x:Name="btnEdit" Width="20" Content="Edit" Click="btnEdit_Click" ></Button>
+    </StackPanel>
+</DataTemplate>

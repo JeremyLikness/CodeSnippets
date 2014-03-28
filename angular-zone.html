@@ -1,6 +1,4 @@
-<DataTemplate x:Name="TestTemplate">
-    <StackPanel Orientation="Horizontal">
-        <TextBlock x:Name="tbName" Text="{Binding Name}"></TextBlock>
-        <Button x:Name="btnEdit" Width="20" Content="Edit" Click="btnEdit_Click" ></Button>
-    </StackPanel>
-</DataTemplate>
+<div class="row-fluid">
+    <div class="text-sm">{{name}}</div>
+    <button ng-click="edit()">Edit</button>
+</div>

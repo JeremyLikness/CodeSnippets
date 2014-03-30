@@ -1,10 +1,1 @@
-<StackPanel>
-    <StackPanel.Resources>
-        <local:DateConverter x:Key="convertDate"/>
-    </StackPanel.Resources>
-    <TextBlock Text="{Binding CurDate, Converter={StaticResource convertDate}}, 
-    ConverterParameter='shortDate'"/>
-</StackPanel>
-
-<!-- Angular -->
-<div class="row-fluid">{{curDate: date:'shortDate'}}</div>
+<TextBox Text="{Binding Name, Mode=TwoWay, ValidatesOnDataErrors=True"/>

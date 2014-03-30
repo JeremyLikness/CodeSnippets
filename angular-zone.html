@@ -1,3 +1,6 @@
 <TextBox Text="{Binding Name, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
 
 <input type="email" ng-model="user.email" required />
+
+<span ng-show="form.userEmail.$error.required">Email is required.</span>
+<span ng-show="form.userEmail.$error.email">You must enter a valid email.</span>
